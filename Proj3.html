@@ -9,7 +9,7 @@
             IS 445 Assignment 3
         </p>
         <p>
-            Building Inventory: Square Footage for the Five Most Common Departments 
+            Building Inventory: Agency Name by Square Footage 
         </p>
         <div id="myviz">
         </div>
@@ -17,18 +17,10 @@
     <script>
         myGraph = {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "data": {
-        "values": [
-            {"Agency Name": "Department of Natural Resources", "Square Footage": 3223},
-            {"Agency Name": "Department of Corrections", "Square Footage": 1428},
-            {"Agency Name": "Department of Transportation", "Square Footage": 1137},
-            {"Agency Name": "Department of Human Services", "Square Footage": 617},
-            {"Agency Name": "University of Illinois", "Square Footage": 525}
-        ]
-    },
-    "mark": "bar",
+    "data": {"url":"cher1n.github.io/building_inventory.csv"},
+    "mark": "circle",
     "encoding": {
-        "x": {  "field": "Agency Name", "type": "nominal"},
+        "x": { "field": "Agency Name", "type": "nominal"},
         "y": { "field": "Square Footage", "type": "quantitative"}
     }
 };
