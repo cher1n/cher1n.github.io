@@ -18,19 +18,21 @@
         myGraph = {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "data": {"url":"building_inventory.csv", "format": {"type":"csv"}},
-            "layer": [
-    {
-      "mark": "rule",
-      "encoding": {
-        "y": {"field": "Square Footage", "aggregate": "mean"},
-         "size": {"value": 2}
-      }
-    },
+    "layer": [
+
    {
     "mark": "circle",
     "encoding": {
         "x": { "field": "Agency Name", "type": "nominal"},
         "y": { "field": "Square Footage", "type": "quantitative"},
+    }
+   },
+   {
+    "mark": "line",
+    "encoding": {
+    "y": {"field": "Square Footage", "aggregate": "mean"},
+     "size": {"value": 2}
+         }
     }
     ]
    
