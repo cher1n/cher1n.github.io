@@ -21,8 +21,8 @@
             
     "mark": "circle",
     "encoding": {
-        "x": { "field": "Agency Name", "type": "nominal"},
-        "y": { "field": "Square Footage", "type": "quantitative", "sort": "-x"}
+        "x": { "field": "Agency Name", "type": "nominal", "sort":"-y"},
+        "y": { "field": "Square Footage", "type": "quantitative"}
     }
 };
         vegaEmbed('#myviz', myGraph);
