@@ -15,16 +15,30 @@
         </div>
     </body>
     <script>
-        myGraph = {
+        sqft = {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "data": {"url":"building_inventory.csv", "format": {"type":"csv"}},
             
     "mark": "circle",
     "encoding": {
         "x": { "field": "Agency Name", "type": "nominal"},
-        "y": { "field": "Square Footage", "type": "quantitative", "sort": "descending"}
+        "y": { "field": "Square Footage", "type": "quantitative"}
+    }
+     <body>
+        <p>
+            Building Inventory: Agency Name by Total Square Footage 
+        </p> 
+     </body>
+         sum = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {"url":"building_inventory.csv", "format": {"type":"csv"}},
+            
+    "mark": "bar",
+    "encoding": {
+        "x": { "field": "Agency Name", "type": "nominal"},
+        "y": { "aggregate": "sun", "field": "Square Footage", "title": "Total Square Footage"}
     }
 };
-        vegaEmbed('#myviz', myGraph);
+        vegaEmbed('#myviz', sqft, sum);
     </script>
 </html>
