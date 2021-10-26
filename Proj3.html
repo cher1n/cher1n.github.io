@@ -20,10 +20,10 @@
     "data": {"url":"building_inventory.csv", "format": {"type":"csv"}},
             "layer": [
     {
-      "mark": "point",
+      "mark": "rule",
       "encoding": {
-        "x": {"field": "Agency Name", "type": "nominal"},
-        "y": {"aggregate": "mean", "field": "Square Footage"},
+        "y": {"field": "Square Footage", "aggregate": "mean"},
+         "size": {"value": 2}
       }
     },
    {
