@@ -18,12 +18,22 @@
         myGraph = {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "data": {"url":"building_inventory.csv", "format": {"type":"csv"}},
-            
+            "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {"field": "Agency Name", "type": "nominal"},
+        "y": {"aggregate": "mean", "field": "Square Footage"},
+        "color": {"field": "symbol", "type": "nominal"}
+      }
+    },
+   {
     "mark": "circle",
     "encoding": {
         "x": { "field": "Agency Name", "type": "nominal"},
         "y": { "field": "Square Footage", "type": "quantitative"},
     }
+    ]
    
 };
         vegaEmbed('#myviz', myGraph);
