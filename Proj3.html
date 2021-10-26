@@ -15,7 +15,7 @@
         </div>
     </body>
     <script>
-        sqft = {
+        myGraph = {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "data": {"url":"building_inventory.csv", "format": {"type":"csv"}},
             
@@ -23,10 +23,9 @@
     "encoding": {
         "x": { "field": "Agency Name", "type": "nominal"},
         "y": { "field": "Square Footage", "type": "quantitative"},
-        "detail": {"aggregate": "mean", "field": "Square Footage"}
     }
    
 };
-        vegaEmbed('#myviz', sqft);
+        vegaEmbed('#myviz', myGraph);
     </script>
 </html>
