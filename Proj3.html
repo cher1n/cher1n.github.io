@@ -17,7 +17,8 @@
     <script>
         myGraph = {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "data": {"url":"building_inventory.csv"},
+    "data": {"url":"building_inventory.csv", "format": {"type":"csv"}},
+            
     "mark": "circle",
     "encoding": {
         "x": { "field": "Agency Name", "type": "nominal"},
